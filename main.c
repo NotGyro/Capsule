@@ -186,7 +186,9 @@ int main(void) {
 		mkline(DBG, 1, 0),
 		mkline(DEC, 1, 0),
 		mkline(JNZ, 1, 3),
-		mkline(DBG, 1, 0)};
+		mkline(DBG, 1, 0),
+		mkline(LDC, 3, 747),
+		mkline(DBG, 3, 0) };
 	ByteBuffer* program_buffer = buffer_from(program, sizeof(program));
 	CapsuleContext* context = new_context(program_buffer);
 	run_context(context);
